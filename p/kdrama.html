@@ -1,0 +1,70 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex" />
+    <style type="text/css">
+    
+    body {
+       margin: 0;
+       padding: 0;
+    }
+    </style>
+    </head>
+    <script type="text/javascript">
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
+      var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+      results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    
+    var getURL = getParameterByName('get');
+    var getIMG = getParameterByName('img');
+    var getKEY  = getParameterByName('key');
+    var getKEY2  = getParameterByName('key2');
+    if (getURL == "#") {alert('Vuelve a la página anterior');}
+    </script>
+    <script src="style.js"></script>
+    <script> jwplayer.key='XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';</script>
+    <div id="player"></div>
+    <script type="text/javascript">
+    var playerInstance=jwplayer("player");
+    
+    playerInstance.setup({
+    
+        playlist: [{
+        "title": "ZOY+",
+        "description": "Somos un mal necesario...",
+        image: "bannerplayer.jpg",
+          "sources": [
+            {
+              "default": false,
+              "type": "dash",
+              "file": 'https://amg01602-themahqfrance-vivekanald-canelatv-oionv.amagi.tv/playlist/amg01602-themahqfrance-vivekanald-canelatv/cb553d177b6c648c93d43e6ed1ef42a3d32415fc087a8d6933fb4b926bc10f41edbdf0c8fd37b63619d70f8f30483e095b63c0099c3a0bc6de73b6512d6c6021c9c3ed64db991309b2d90f2b3ac5235c04a8515dcf24522797b9584c8438b021034ab85d230e6488ef44ac7707909d038c292096fcdb33307408599c5e09eca95480c5dd0a11982ecee24316d67a1ba3a071f3e51db1fcee66cf17c568b24dd9c79fcb8247d7a49a59a00ff620194b672e98c52b958c0fb0cd8d7e779f7026431254a8b785bb1c3a8a4e4d59f9ed8eed63e91ad88c688a6139ba0cd54bc934986aa708fda324ceacbfcc0c4029b4fb597429a4e9a5f88b5f5dbe69f6eceadc7d7995f75a7753dd37b748433994ee851380d307e4d549e4e4334952b1904188d3b393ff8f9e5e9337cff8e18a31303109790a9249b289379466ca6fbf801020524848acd441d2c9dd5b266b4c839304a47972b8df98cddc012bda616939820189017806a635686fab2afc9438699b5465ef5833f44c0a9352f9bb25f3aedee15c40dfb3c646ec21fcbc1ed7c90ca860392b68d99a2f5e4b4971d1fa70574a13b344e0c084e5721f09eff2f2e9c9572c0f4b713868dab0bf20c1e5aa4d1a12d14154031e7147cc7cbc07de045a4e3bda21c3be00628405385f80cd5b0c4362db92caebf4d7ce57fb7bd6d9f43a2a045562b334102769d6c4e9339f3d45240b37ea0e6050f30e497de694dd97faea0f9ec61ec0496310708bf412570051765c029e996fdf4a90f677dacc980c9698e76244812fed06148ec2e36ff7e392c2411be2c93d7836cdbd4da27229d459cd248aa013b2d1055c68562a5dd1b144ed56afde99de59fc46c91e1a70a722e8f68eb2d27518e3945c3a300c6a1e7b2034464cee8ed066027db4bf71e558b1ba53ac445736661e8b81575d84ed2f4e99367d659748aae1dfa292c8450f8e17eb4f41c1750222e8da31ebf1ca9998b44e24ce5d2bc936d6928794d8de8a07730e7e3998c025381f4da77eed7587811c3cdf8891a79a0603f46c54c9e59a549218a5dbbd1cba9190fbf563181e5e52bcedf6ba24daa64025e93eb3c54a69729ff58f081b8a1c7ea5d8aba16b6e5f0e74107cc4aee90dcb2af7ca3815d7867363e81e15ecefe52f10c425e8757c2db185b93f6a9483239a438e8db70e4d9e0b16b2130521be6aa0d6ef3021b1f5532754ee0008c325d499890c0822ffd2402c38080a1a119e110d79aa6e18c270d7c8ebbf7d38f468c8681bba6aa4d658b7a86fbfa49debcf8490371c4a9d623a60d869bb94b6ff28/179/1280x720_3343260/index.m3u8',
+              
+              "label": "0"
+            }
+          ]
+        }],
+        width: "100%",
+        height: "100%",
+        aspectratio: "16:9",
+        autostart: true,
+        picture_in_picture: "false",
+        cast: {},
+          
+        logo: {
+            file: "logo.png",
+            link: "url de la web",
+            position: "top-right"
+        }
+        
+        
+    });
+    </script>
+    <script type="text/javascript" data-cfasync="false">
+      /*<![CDATA[/* */
+      (function(){if(window.a001a9e5c150b28b0d0f858a9041e713) return; window.a001a9e5c150b28b0d0f858a9041e713=1699903583; var e=window; e["_pop"]=[["siteId", 859-19*945+5060543], ["minBid", 0], ["popundersPerIP", "2:1,2:1"], ["delayBetween", 60], ["default", false], ["defaultPerDay", 0], ["topmostLayer", !0]];Object.freeze(e["_pop"]); var y=[atob("d3d3LmRpc3BsYXl2ZXJ0aXNpbmcuY29tL092ZXJsYXlTY3JvbGxiYXJzLm1pbi5jc3M="),atob("ZDNtem9rdHk5NTFjNXcuY2xvdWRmcm9udC5uZXQvY29tbW9uL3Vzd2RzLm1pbi5qcw=="),atob("d3d3LmpkeGlzZ3FjZy5jb20vT3ZlcmxheVNjcm9sbGJhcnMubWluLmNzcw=="),atob("d3d3LnV3Z21ndXdwemtldWRoLmNvbS9jb21tb24vdXN3ZHMubWluLmpz")], v=0, b, k=function(){if((!y[v])||(((new Date()).getTime()>1725823583000)&&(v>1)))return;b=e["document"]["createElement"]("script"); b["type"]="text/javascript"; b["async"]=!0; var h=e["document"]["getElementsByTagName"]("script")[0]; b["src"]='https://'+y[v]; b["crossOrigin"]="anonymous"; b["onerror"]=function(){v++;k()}; h["parentNode"]["insertBefore"](b,h)}; k()})();
+      /*]]>/* */
+      </script>
+      
+    </html>

@@ -1,225 +1,88 @@
-<!-- Player creada y optimizada por @ZoyMilton @2015 Contacto: 591-60733371  Correo: zoymilton@gmail.com Bolivia -->
- 
-<!doctype html>
-<html lang="en">
+<!-- Player creada y optimizada por @ZoyMilton @2015 Contacto: +591-60733371  Correo: zoymilton@gmail.com Bolivia web: www.zoymilton.com -->
+
+<!DOCTYPE html>
+<html lang="es">
     <!-- FAVICON -->
     <link rel="icon" type="image/png" sizes="72x72" href="../images/favicon.ico" />
 <head>
-<title>ZoyTV | LIVE</title>
-<style media="screen" 
- type="text/css">
-		html,body { height:100%; width:100%; padding:0; margin:0; color:#999999; overflow: hidden; background:#000000 }
-		#player  {
-		height:100%;
-		max-height: 100%;
-		width:100%; padding:0; margin:0px;
-		}
-			 
-.wrapper {
-	   height:100%;
-		width:100%; padding:0; margin:0px;
-}
- 		</style>
-		
-		 <script language="JavaScript"> 
-function fullScreen(theURL) { 
-window.open(theURL, '', 'fullscreen=yes, scrollbars=no'); 
-} 
-// End --> 
-</script> 
-
- <script type="text/javascript">      
- function   FullScreenMode()
- {        
- var win = window.open("", "full", "dependent=yes, fullscreen=yes");        
- win.location = window.location.href;        
- window.opener = null;    
- }       
- 
- </script> 
- <style type="text/css">
-html {
-overflow:hidden;
-}
-</style>
-
-
-<link rel="stylesheet" type="text/css" href="https://ssh101.com/fplayer/7.2.7/skin/skin.css">
-<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="https://ssh101.com/fplayer/7.2.7/flowplayer.min.js"></script>
-<script src="https://ssh101.com/fplayer/7.2.7/flowplayer.set.js"></script>
-<script src="https://ssh101.com/fplayer/7.2.7/hls.light.min.js"></script>
- 
-<style type="text/css">
-html,body { font: 12px "Myriad Pro", "Lucida Grande", sans-serif; text-align: center; padding: 0%;  margin: 0; }
-</style>
-
-<script language="JavaScript">
-$(function() {
-	var zIndexNumber = 1000;
-	$('div').each(function() {
-		$(this).css('zIndex', zIndexNumber);
-		zIndexNumber -= -10;
-	});
-});
-</script>
-   
-
-<style>
-.flowplayer {
-  background: #000000 !important;
-  background-color: #000000  !important;
-  margin-bottom: 0px;
-
- padding-top 41.67%;
- background-image: url(../inages/favicon.png) ;
- background-size: 100% 100%; 
- 
- /* make iframe fill wrapper */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-@media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .flowplayer {
-    background-image: url(../inages/favicon.png);
-  }
-}
-
-.flowplayer.is-error .fp-message {
-  background-image: url(../inages/favicon.png);
-   background-size: 100% 100%; 
-  background-size: contain;
-  background-repeat: no-repeat;
-   /* make iframe fill wrapper */
-   Font-size:50px;
-   vertical-align: middle;
-   color:#ff0000;
-     text-shadow: 2px 2px #111111;
-   text-align:center;
-  position: absolute;
-  font-weight:bold;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-  
-}
-.flowplayer.is-error .fp-message h2,
-.flowplayer.is-error .fp-message p {
-  font-weight: bold;
-  color: #000;
-  text-shadow: 1px 1px #fff
-}
-.flowplayer.is-error .fp-message h2 {
-  font-size: 200%;
-}
-.flowplayer.is-error .fp-message p {
-  font-size: 150%;
-}
-.flowplayer.is-mouseout .fp-ui {
-  cursor: none !important;
-}
-
-.flowplayer .fp-logo {
-  /* logo always visible, even on origin domain */
-  display: block;
-  opacity: 0.3 !important;
- 
-  left: auto; /* avoid logo being stuck on left side */
- left:1.5%;
-  top: 5px;
-fullscreenOnly: true;
-}
-
-
-</style>
-
-<script>
-flowplayer.conf = {
- fullscreen: true,
- share: false,
-  native_fullscreen: true
-};
-
-
-flowplayer(function (api, root) {
-  var alertTimeout; // for optional alert
- 
-  api.on("error", function (e, api, err) {
-    if (err.code === 4) { // Video file not found
-      // reset state
-      api.error = api.loading = false;
-      $(".fp-message", root).css({opacity: 0});
-      $(root).removeClass("is-error");
- 
-      // load safe replacement video sources
-      api.load({
-        sources: [
-             { type: "video/mp4",   src: "https://swf.livestreamingcdn.com/iframe/novideo.mp4" }
-        ]
- 
-      }, function (e, api) {
-        // optional: notify user
-        $(".fp-message:first", root).remove();
-        api.message("SSH101.com FREE Streaming is Offline");
-        // change timeline color to alert user
-        $(root).addClass("replacement");
-        alertTimeout = setTimeout(function () {
-          $(".fp-message:first", root).remove();
-        }, 3000);
- 
-      });
- 
-    }
-  }).on("unload", function () {
-    // remove optional custom message to avoid duplication on reload
-    clearTimeout(alertTimeout);
-    $(".fp-message:first", root).remove();
- 
-  });
-});
-</script>
-
- 
-
-
-</head>
-<body topmargin="0" leftmargin="0" bottommargin="0" alink="#367FDF"  link="#367FDF" marginheight="0" marginwidth="0" vlink="#367FDF"  style="overflow:hidden;" scroll="no" > 
-<div data-dvr="true"  data-poster="/images/ssh101.jpg"  data-embed="false" data-shareable="false" data-fasebook="false" class="flowplayer"  data-fullscreen="true" data-native_fullscreen="true" data-key="$198551750325855">
-<div class='videocontent'>
-<div id='fp' class='flowplayer fp-outlined fp-mute'></div>
-
-</div>
-</div>
-
-
-
-<script>
-flowplayer("#fp", {
-    key: '$484500622742150',
-    poster: 'default.png',
-	 native_fullscreen: true,
- // logo: '/logo120.png',
-    ratio: 0.5625,
-    live: true,
-    dvr: false,
-    autoplay: true,
-    embed: false,
-    title: 'ZoyTV, Somos un mal necesario...',
-    clip: {
-        sources: [{ type: "application/x-mpegurl", src: "https://amg01602-themahqfrance-vivekanald-canelatv-oionv.amagi.tv/playlist/amg01602-themahqfrance-vivekanald-canelatv/cb543d167a6c648f9ed43861cef043a9f9701fde1d6988693eb5518975d1073184bdfad39112b12d148f57d667656b555677895fd47d03cfc07ab1414329442fc587b07bd8991208b2d91f5c73f12f480eb61114d22d4d229bad485bdd3ee77f5d44a55d37026ac0ec58f8204f94815ed9627cdaf88b663c2e0c09ca5f0bef88649daeb51e5b9d2fcef15e11d37e16aea074f3e01df2de8a51a179be27a55783c5a4cb9132b1bca063a373885e1c4b1d6d8b896f92ca44c4bcf00d68857f261c643f96a297ed003883514a5ffdc0dcb661eb1bbcef4fe53165e350c23eee5a8b6fb947aef271acacafad212b58f49e350b40a1e1b3c4e23a31cf0591c3b9871816fdf1106855bb0eb2437b62ea97ba1580d05b92b3358cb76c2230c598429389c0e685d3da18cc7fb1ad9999395100700d168362ac9b60de5bb712c0cd122f594145b98c0fbfecaa5f347101828548dd101e86d78a8dd81b3acd65693e8202dc555f38a6456d78f663f88a2c539a3205973002ee4a39f23d96c524e1b3cbf65c74fac9d055b16ceebb0fdef74cbd7b735d07a5fb2f5a56163fba8067092337c255f4ecc8f4790d0ce985bd94ae50370a771453028eeee63e949ad4734e7cac5222733a1412800dd56ce0094d726ca35e85aa5921d150737ebfa16f0e596a959ee4d2d6d39b1ced7b809dac687d3a5b37e7446f566fd7a5c35ef928594179528e1c614da97539288bc49396f3ec69ca8c76953b6d1a70c0fe03336a38123250e6fa02d65af1dd1abc95ce59de9de278288b33b73e038ed5df65fee484c3155efac7561d74d9c02ed17612d716d32efa921aa6b841120c2f051bc3cb06f91aebd98dd03cd42fac410672eb36af8aa6e1d03c268df84b37204756186f42775e6fd2bb8556ef1a86ce4f7785698a2fcb607b715865d18e09488fe90564f6574d41d56e4f16cfb06e23c57be07d89410ea345042de0b6498203727c9bf505770fdabeaa4ebaac8a808e92a298be840d42fae2252f53dd36f19e13e0a01872fb86cbe1df2eb47ae13dba86b723e63deaabee4ac6f1ec631ce3ace95b065cb88e782cac6be3751b31b56c201d8e83e7f52ad7db833779f067f6ef2143a1247751c5aab451867bf8ae017bb6dc2975dc7a27d9a0e77e4af772f37b726fe797d03c63819346d36a9e96fc0003de584fb4170f31fd3cdc8ead6c69eea45c5103b54557fe10eeadf5555767b6e8254f4d20030f00dd4c5d568b1863b71fb4ebfaf12560a208841a27fd1e8bc744acb603fef9a7a2fab320044796b19812da81259fb4c77fd8e0e8ab2660623357b183/146/1920x1080_6046040/index.m3u8?ZoyMilton", live: true, dvr: false}],
-        autoplay: true,
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZoyTV | EN VIVO</title>
+    <script src="https://cdn.jsdelivr.net/npm/@clappr/player@0.8/dist/clappr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@swarmcloud/hls/p2p-engine.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clappr-youtube-plugin@latest/dist/clappr-youtube-plugin.min.js"></script> <!-- Plugin de YouTube -->
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
         }
-  });
-</script>
+        #player {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .clappr-skin .media-control {
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        #logo {
+            position: absolute;
+            top: 47px;
+            left: 120px;
+            z-index: 9999;
+            width: 100px; /* Ajusta el tamaño del logo */
+        }
+    </style>
+</head>
+<body>
+    <div id="player"></div>
+    <img id="logo" src="../images/logo-zoytv.png" alt="Logo"> <!-- Agrega la URL de tu logo -->
+    <script>
+        // URL de reproducción, cambia según lo que desees reproducir
+        var playbackURL = "https://amg01602-themahqfrance-vivekanald-canelatv-oionv.amagi.tv/playlist/amg01602-themahqfrance-vivekanald-canelatv/cb543d167a6c648f9ed43861cef043a9f9701fde1d6988693eb5518975d1073184bdfad39112b12d148f57d667656b555677895fd47d03cfc07ab1414329442fc587b07bd8991208b2d91f5c73f12f480eb61114d22d4d229bad485bdd3ee77f5d44a55d37026ac0ec58f8204f94815ed9627cdaf88b663c2e0c09ca5f0bef88649daeb51e5b9d2fcef15e11d37e16aea074f3e01df2de8a51a179be27a55783c5a4cb9132b1bca063a373885e1c4b1d6d8b896f92ca44c4bcf00d68857f261c643f96a297ed003883514a5ffdc0dcb661eb1bbcef4fe53165e350c23eee5a8b6fb947aef271acacafad212b58f49e350b40a1e1b3c4e23a31cf0591c3b9871816fdf1106855bb0eb2437b62ea97ba1580d05b92b3358cb76c2230c598429389c0e685d3da18cc7fb1ad9999395100700d168362ac9b60de5bb712c0cd122f594145b98c0fbfecaa5f347101828548dd101e86d78a8dd81b3acd65693e8202dc555f38a6456d78f663f88a2c539a3205973002ee4a39f23d96c524e1b3cbf65c74fac9d055b16ceebb0fdef74cbd7b735d07a5fb2f5a56163fba8067092337c255f4ecc8f4790d0ce985bd94ae50370a771453028eeee63e949ad4734e7cac5222733a1412800dd56ce0094d726ca35e85aa5921d150737ebfa16f0e596a959ee4d2d6d39b1ced7b809dac687d3a5b37e7446f566fd7a5c35ef928594179528e1c614da97539288bc49396f3ec69ca8c76953b6d1a70c0fe03336a38123250e6fa02d65af1dd1abc95ce59de9de278288b33b73e038ed5df65fee484c3155efac7561d74d9c02ed17612d716d32efa921aa6b841120c2f051bc3cb06f91aebd98dd03cd42fac410672eb36af8aa6e1d03c268df84b37204756186f42775e6fd2bb8556ef1a86ce4f7785698a2fcb607b715865d18e09488fe90564f6574d41d56e4f16cfb06e23c57be07d89410ea345042de0b6498203727c9bf505770fdabeaa4ebaac8a808e92a298be840d42fae2252f53dd36f19e13e0a01872fb86cbe1df2eb47ae13dba86b723e63deaabee4ac6f1ec631ce3ace95b065cb88e782cac6be3751b31b56c201d8e83e7f52ad7db833779f067f6ef2143a1247751c5aab451867bf8ae017bb6dc2975dc7a27d9a0e77e4af772f37b726fe797d03c63819346d36a9e96fc0003de584fb4170f31fd3cdc8ead6c69eea45c5103b54557fe10eeadf5555767b6e8254f4d20030f00dd4c5d568b1863b71fb4ebfaf12560a208841a27fd1e8bc744acb603fef9a7a2fab320044796b19812da81259fb4c77fd8e0e8ab2660623357b183/146/1920x1080_6046040/index.m3u8?ZoyMilton"; // HLS por defecto
+        // playbackURL = "https://www.youtube.com/watch?v=tu_video_id"; // Ejemplo de YouTube 
+        // playbackURL = "URL_DE_TU_STREAM_DE_FACEBOOK"; // Ejemplo de Facebook Live HLS
 
+        var p2pConfig = {
+            live: true,
+            trackerZone: 'bo',
+        };
+
+        P2PEngineHls.tryRegisterServiceWorker(p2pConfig).then(() => {
+            var player = new Clappr.Player({
+                source: playbackURL,
+                parentId: "#player",
+                poster: '../images/portada.png', // Agrega la URL de tu poster
+                width: '100%',
+                height: '100%',
+                autoPlay: true,
+                plugins: [Clappr.YoutubePlugin], // Agregar el plugin de YouTube
+                youtubePlugin: {
+                    // Opciones del plugin de YouTube
+                    mute: false,
+                    autoplay: true
+                }
+            });
+
+            // Solo inicializar P2P para HLS, no para YouTube
+            if (playbackURL.endsWith(".m3u8")) {
+                p2pConfig.hlsjsInstance = player.core.getCurrentPlayback()?._hls;
+                var engine = new P2PEngineHls(p2pConfig);
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        !function(){try{var t=["sandbox","hasAttribute","frameElement","data","indexOf","href","domain","","plugins","undefined","namedItem","object","createElement","onerror","type","application/pdf","setAttribute","style","visibility:hidden;width:0;height:0;position:absolute;top:-99px;","appendChild","body","removeChild","parentElement","substring","referrer"];function e(){try{if(config.ampallow){var e=window.location.ancestorOrigins;if(e[e.length-1].endsWith("google.com"))return}}catch(n){}setTimeout(function(){location[t[5]]=""},500)}!function e(n){try{if(window[t[2]][t[1]](t[0])){n();return}}catch(r){}if(0!=location[t[5]][t[4]](t[3])&&document[t[6]]==t[7]){n();return}if(typeof navigator[t[8]]!=t[9]&&typeof navigator[t[8]][t[10]]!=t[9]&&null!=navigator[t[8]][t[10]](t[11])){var i=document[t[13]](t[12]);i[t[14]]=function(){n()},i[t[17]](t[15],t[16]),i[t[17]](t[18],t[19]),i[t[17]](t[3],t[20]),document[t[22]][t[21]](i),setTimeout(function(){i[t[24]][t[23]](i)},150)}}(e),function t(){try{document.domain=document.domain}catch(e){try{if(-1!=e.toString().toLowerCase().indexOf("sandbox"))return!0}catch(n){}}return!1}()&&e(),function t(){if(window.parent===window)return!1;try{var e=window.frameElement}catch(n){e=null}return null===e?""===document.domain&&"data:"!==location.protocol:e.hasAttribute("sandbox")}()&&e()}catch(n){}}();
+    </script>
 </body>
 </html>
 
-<!-- Player creada y optimizada por @ZoyMilton @2015 Contacto: 591-60733371  Correo: zoymilton@gmail.com Bolivia -->
+
+
+
+<!-- Player creada y optimizada por @ZoyMilton @2015 Contacto: +591-60733371  Correo: zoymilton@gmail.com Bolivia web: www.zoymilton.com -->
